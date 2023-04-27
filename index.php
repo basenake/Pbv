@@ -1,5 +1,6 @@
 <h1>表單傳值</h1>
 <h3>get</h3>
+<!-- 一個表單只能用 一個 get or post 來收 -->
 <form action="target.php" method="get">
     <input type="text" name="name" id="name">
     <input type="submit" value="送出">
@@ -10,7 +11,6 @@
     <input type="text" name="name" id="name">
     <input type="submit" value="送出">
 </form>
-
 
 <h3>post及檔案上傳</h3>
 <form action="target.php" method="post" enctype="multipart/form-data">
