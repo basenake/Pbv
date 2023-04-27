@@ -1,11 +1,11 @@
 <?php
+
 $height=$_GET['height'];    //身高
 $weight=$_GET['weight'];    //體重
 
 echo "您輸入的身高為:".$height."公分 <br>";
 echo "您輸入的體重為:".$weight."公斤 <br>";
-
-$bmi=round( $weight / (($height/100)*($height/100)),2);
+$bmi=round($weight/(($height/100)*($height/100)),2);
 // pow($height,2)
 
 $level='';
@@ -24,5 +24,6 @@ echo "您的BMI為:" ;
 echo "<br>";
 echo "您的體位判定為: .$level";
 echo "<br>";
-
 ?>
+
+<a href="index.php">回首頁</a>"
