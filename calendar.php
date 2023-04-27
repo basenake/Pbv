@@ -1,3 +1,10 @@
+<?php
+//isset 才可以使用 判斷 變數是否存在才可以用
+$a=5;
+$t=(isset($a))?:52;;
+//$t=$a??52;
+
+?>
 <style>
     table{
         border-collapse: collapse;
