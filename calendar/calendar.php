@@ -1,35 +1,24 @@
 <?php
 //isset 才可以使用 判斷 變數是否存在才可以用
-$a=5;
-$t=(isset($a))?:52;;
+//$a=5;
+//$t=(isset($a))?:52;;
 //$t=$a??52;
 
 ?>
-<style>
-    table{
-        border-collapse: collapse;
-    }
-    table,td{
-        border: 1px solid black;
-        padding: 10px 15px;
-    }
+<a href="./style.css"></a>
 </style>
 <?php
-$today=strtotime("now");//當前時間
-$month=date("n",$today);
-$days=date("t",$today);
-$frd=date("Y-n-1",$today);
-//firstday  第一天
-$fnd=date("Y-n-t",$today);
-//fianlday 最後一天
-$frdw=date("w",strtotime($frd));
-//firstdayweek 第一周
-$fndw=date("w",strtotime($fnd));
-//fianldayweek 最後一周
-$weeks=ceil(($days+$frdw)/7);
-$frws=$frdw-1;
-//fristweekspace
+$today=strtotime("now");    //取得當前的月份
+$month=date("n",$today);    //取得年份;
+$days=date("t",$today);     //取得當前月份第一天
+$frd=date("Y-n-1",$today);  //取得當前月份的總天數
+$fnd=date("Y-n-t",$today);  //取得當前月份最後一天
+$frdw=date("w",strtotime($frd));   //取得當前月份第一天的星期
+$fndw=date("w",strtotime($fnd));    //取得當前月份最後一天的星期
+$weeks=ceil(($days+$frdw)/7);   //計算當前月份的天數會佔幾周
+$frws=$frdw-1;  //計算當前月份第一周的空白日(或前一個月份佔幾天)
 echo $month;
+
 echo "<table>";
 echo "<tr>";
 echo "<td>日</td>";
