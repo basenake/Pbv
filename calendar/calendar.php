@@ -20,19 +20,8 @@ $weeks=ceil(($days+$frdw)/7);   //計算當前月份的天數會佔幾周
 $frws=$frdw-1;  //計算當前月份第一周的空白日(或前一個月份佔幾天)
 echo $month;
 
-echo "<table>";
-echo "<tr>";
-echo "<td>日</td>";
-echo "<td>一</td>";
-echo "<td>二</td>";
-echo "<td>三</td>";
-echo "<td>四</td>";
-echo "<td>五</td>";
-echo "<td>六</td>";
-echo "</tr>";
 
 $days=[];
-
 for($i=0;$i<$weeks;$i++){
     for($j=0;$j<7;$j++){
         if(($i==0 && $j<$frdw)||(($i==$weeks-1)&&$j>$fndw)){
@@ -42,6 +31,7 @@ for($i=0;$i<$weeks;$i++){
         }
     }
 }
+echo "<hr>";
 echo "<table>";
 echo "<tr>";
 echo "<td>日</td>";
